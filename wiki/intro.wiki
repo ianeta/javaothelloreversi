@@ -1,0 +1,17 @@
+#summary This is the introduction of the Othello game.
+
+= Introduction =
+
+Mirror flower water moon has contributed some characteristic of the game.
+
+= Details =
+
+Characteristics:
+  * 只係自己同自己捉
+  * 要check直橫斜有邊d棋要反轉
+  * 下過棋既地方唔可以再下
+  * 唔可以同一隻色既棋連續下2次
+  * 一開始棋盤中央會先有4隻棋子
+  * 黑色白色各2隻
+  * 每一步都要令到對方的棋子反轉,姐係要夾住對方既棋,如果唔係就唔可以行果個位
+  * 棋盤大小我估係8x8
