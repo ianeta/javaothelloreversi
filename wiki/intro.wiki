@@ -2,11 +2,12 @@
 
 = Introduction =
 
-Mirror flower water moon has contributed some characteristic of the game.
+Mirror flower water moon has contributed some characteristic of the game. The illusion is added to better visualize the checker board.
 
 = Details =
 
 Characteristics:
+
   * 只係自己同自己捉
   * 要check直橫斜有邊d棋要反轉
   * 下過棋既地方唔可以再下
@@ -16,7 +17,8 @@ Characteristics:
   * 每一步都要令到對方的棋子反轉,姐係要夾住對方既棋,如果唔係就唔可以行果個位
   * 棋盤大小我估係8x8
 
-A depiction of the checker board:
+
+An illusion of the checker board:
 
 ||0||1||2||3||4||5||6||7||8||
 ||1||-||-||-||-||-||-||-||-||
