@@ -31,4 +31,4 @@ An illustration of the Othello board:
 ||8||-||-||-||-||-||-||-||-||
 
 
-Please take a look on litstudy.
+Please take a look on [litstudy Literature study].
