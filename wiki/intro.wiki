@@ -2,23 +2,13 @@
 
 = Introduction =
 
-Mirror flower water moon has contributed some characteristic of the game. The illusion is added to better visualize the checker board.
+This is an introductory guide to the design, implementation and testing of the Othello game developed in the Java language.
 
-= Details =
+== What is Othello or Reversi or Apple Chess? ==
 
-Characteristics:
+In short, it is a two player turn based board game with 8 x 8 grids.
 
-  * 只係自己同自己捉
-  * 要check直橫斜有邊d棋要反轉
-  * 下過棋既地方唔可以再下
-  * 唔可以同一隻色既棋連續下2次
-  * 一開始棋盤中央會先有4隻棋子
-  * 黑色白色各2隻
-  * 每一步都要令到對方的棋子反轉,姐係要夾住對方既棋,如果唔係就唔可以行果個位
-  * 棋盤大小我估係8x8
-
-
-An illustration of the Othello board:
+An illustration of the Othello board starting(where O is white, X is black):
 
 ||0||1||2||3||4||5||6||7||8||
 ||1||-||-||-||-||-||-||-||-||
@@ -30,5 +20,12 @@ An illustration of the Othello board:
 ||7||-||-||-||-||-||-||-||-||
 ||8||-||-||-||-||-||-||-||-||
 
+= Details =
 
-Please take a look on [litstudy Literature study].
+== Literature Study ==
+
+Some links are gathered in the [litstudy Literature Study] wiki page. Links marked with *Good* are recommended.
+
+== Game Rules ==
+
+See the [gamerules] wiki page.
