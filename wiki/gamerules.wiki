@@ -21,7 +21,7 @@ Starting:
   * Black(X) moves first, round robin with white.
 
 Playing:
-  * Place one piece to trap the opponent's piece(s) within the vertical, horizontal or diagonal line surrounded by the mover's piece.
+  * Place one piece to trap the opponent's piece(s) within the vertical, horizontal or diagonal line surrounded by the mover's piece. The opponent piece(s) between the new piece and the nearest own piece in 8 directions will be captured and replaced by own piece.
   * Each move must capture opponent's piece or else the round is skipped.
   * The game terminate when no more move can be made by both players.
 
