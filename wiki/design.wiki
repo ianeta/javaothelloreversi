@@ -1,0 +1,38 @@
+#summary How to Design?
+
+= Introduction =
+
+One of a flexible design pattern is called Model-View-Controller that with 3 different layers, each of which is loosely coupled. The implementation of each layer can be swapped without rewriting the whole thing.
+
+It's valuable for a flexible design, but requires more design and development effort. While at the first sight, the all-in-one approach may seems to be easier. With flexibility comes complexity.
+
+
+= Details =
+
+== What is Model-View-Controller?(A short explanation) ==
+
+Model refers to the data and methods to access them. View is the presentation of the model is some ways. Controller affects the behavior of the model and view under certain conditions.
+
+
+== How to use MVC to design Othello? ==
+
+=== Model ===
+
+Determine the entities of the game. There're Board, Player, Piece, Score, anymore?
+
+Next, define the domain/constraint of the entities:
+  Board - 1 and only 1 of it.
+  Player - Two.
+  Piece - Black or white.
+  Score - 1 point per piece.
+
+=== View ===
+
+What should be rendered on the screen?
+  # Board(with empty, black or white piece)
+  # Whose turn
+  # The score so far
+  # An option to quit the game...
+  # Optionally, a timer
+
+=== Controller ===
