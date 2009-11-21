@@ -18,13 +18,18 @@ Model refers to the data and methods to access them. View is the presentation of
 
 === Model ===
 
-Determine the entities of the game. There're Board, Player, Piece, Score, anymore?
+Determine the entities of the game:
+  # Board
+  # Player
+  # Piece
+  # Score
+  anymore?
 
 Next, define the domain/constraint of the entities:
-  Board - 1 and only 1 of it.
-  Player - Two.
-  Piece - Black or white.
-  Score - 1 point per piece.
+  # Board - 1 and only 1 of it.
+  # Player - Two.
+  # Piece - Black or white.
+  # Score - 1 point per piece.
 
 === View ===
 
