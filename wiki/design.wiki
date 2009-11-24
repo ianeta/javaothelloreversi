@@ -26,7 +26,7 @@ Determine the entities of the game:
   anymore?
 
 Next, define the domain/constraint of the entities:
-  # Board - 1 and only 1 of it.
+  # Board - 1 and only 1 of it. (But...wait!! It consist of 8x8 slots for empty/black/white piece!)
   # Player - Two.
   # Piece - Black or white.
   # Score - 1 point per piece.
