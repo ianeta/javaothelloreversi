@@ -11,33 +11,21 @@ It's valuable for a flexible design, but requires more design and development ef
 
 == What is Model-View-Controller?(A short explanation) ==
 
-Model refers to the data and methods to access them. View is the presentation of the model is some ways. Controller affects the behavior of the model and view under certain conditions.
+Model refers to the data and methods to access them. View is the presentation of the model is some ways. Controller affects the behavior of the model and view under certain conditions. (Possibly wrong, need correction. Study the MVC example of the RICE University to find out.)
 
 
-== How to use MVC to design Othello? ==
+== What are the components of Othello? ==
 
-=== Model ===
-
-Determine the entities of the game:
-  # Board
-  # Player
-  # Piece
-  # Score
-  anymore?
-
-Next, define the domain/constraint of the entities:
   # Board - 1 and only 1 of it. (But...wait!! It consist of 8x8 slots for empty/black/white piece!)
   # Player - Two.
   # Piece - Black or white.
   # Score - 1 point per piece.
 
-=== View ===
 
-What should be rendered on the screen?
+== What should be rendered on the screen? ==
+
   # Board(with empty, black or white piece)
   # Whose turn
   # The score so far
   # An option to quit the game...
   # Optionally, a timer
-
-=== Controller ===
