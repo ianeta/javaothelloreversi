@@ -29,3 +29,11 @@ Model refers to the data and behavior associated with the data. View is the pres
   # The score so far
   # An option to quit the game...
   # Optionally, a timer
+
+== Too boring? Lets go! ==
+
+{{{
+public class Board {
+    Slot slots[][] = new Slot[8][8];
+}
+}}}
