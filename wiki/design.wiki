@@ -2,7 +2,7 @@
 
 = Introduction =
 
-One of a flexible design pattern is called Model-View-Controller that with 3 different layers, each of which is loosely coupled. The implementation of each layer can be swapped without rewriting the whole thing.
+One of a flexible design pattern is called Model-View-Controller(or Model-View-Adapter) that with 3 different components, each of which is loosely coupled. The implementation of each layer can be swapped without rewriting the whole thing.
 
 It's valuable for a flexible design, but requires more design and development effort. While at the first sight, the all-in-one approach may seems to be easier. With flexibility comes complexity.
 
@@ -11,10 +11,10 @@ It's valuable for a flexible design, but requires more design and development ef
 
 == What is Model-View-Controller?(A short explanation) ==
 
-Model refers to the data and methods to access them. View is the presentation of the model is some ways. Controller affects the behavior of the model and view under certain conditions. (Possibly wrong, need correction. Study the MVC example of the RICE University to find out.)
+Model refers to the data and behavior associated with the data. View is the presentation of the model data is some ways. Controller is an adapter that translate both the input data to the model and the output or state changes from the model to the view.
 
 
-== What are the components of Othello? ==
+== What are the components of the game, Othello? ==
 
   # Board - 1 and only 1 of it. (But...wait!! It consist of 8x8 slots for empty/black/white piece!)
   # Player - Two.
@@ -22,7 +22,7 @@ Model refers to the data and methods to access them. View is the presentation of
   # Score - 1 point per piece.
 
 
-== What should be rendered on the screen? ==
+== What should be included in the User Interface? ==
 
   # Board(with empty, black or white piece)
   # Whose turn
