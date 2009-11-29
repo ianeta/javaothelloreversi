@@ -1,10 +1,10 @@
-package org.nothize.game.othello.unittest;
+package org.nothize.game.othello.console.unittest;
 
 import org.junit.Test;
 import org.nothize.game.othello.Board;
-import org.nothize.game.othello.ConsoleAdapter;
-import org.nothize.game.othello.ConsoleView;
 import org.nothize.game.othello.OthelloState;
+import org.nothize.game.othello.console.ConsoleAdapter;
+import org.nothize.game.othello.console.ConsoleView;
 
 public class ConsoleViewTest {
 	

@@ -29,4 +29,19 @@ public class Board {
 	public Piece[][] getPieces() {
 		return pieces;
 	}
+	
+	public boolean isValidMove(Position p) {
+		int x = p.getX();
+		int y = p.getY();
+		
+		// Only empty slot can be placed.
+		if ( pieces[y][x] == Piece.EMPTY ) {
+			
+			// Check to see if any neighbor in the 8 directions is occupied by same player.
+			
+			
+		}
+		
+		return false;
+	}
 }

@@ -1,5 +1,7 @@
 package org.nothize.game.othello;
 
+import org.nothize.game.othello.console.ConsoleAdapter;
+
 /**
  * This is the main class of the game. A game loop will continue
  * to run until {@link OthelloGame#isTerminate()} return true.
