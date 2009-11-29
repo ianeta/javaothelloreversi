@@ -4,7 +4,7 @@ public enum Piece {
 	EMPTY {
 		@Override
 		public char getFace() {
-			return ' ';
+			return '.';
 		}
 	}, BLACK {
 		@Override
