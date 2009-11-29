@@ -17,8 +17,8 @@ Below is the first draft of the Othello board output in console mode. The idea o
 1 . . . . . . . .
 2 . . . . . . . .
 3 . . . . . . . .
-4 . . . X O . . .
-5 . . . O X . . .
+4 . . . O X . . .
+5 . . . X O . . .
 6 . . . . . . . .
 7 . . . . . . . .
 8 . . . . . . . .
