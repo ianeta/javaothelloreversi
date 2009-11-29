@@ -2,18 +2,18 @@ package org.nothize.game.othello;
 
 
 public class Player {
-	PIECE piece;
+	Piece piece;
 	int score = 0;
 
-	public Player(PIECE piece) {
+	public Player(Piece piece) {
 		this.piece = piece;
 	}
 
-	public PIECE getPiece() {
+	public Piece getPiece() {
 		return piece;
 	}
 
-	public void setPiece(PIECE piece) {
+	public void setPiece(Piece piece) {
 		this.piece = piece;
 	}
 }
