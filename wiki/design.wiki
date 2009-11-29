@@ -32,8 +32,4 @@ Model refers to the data and behavior associated with the data. View is the pres
 
 == Too boring? Lets go! ==
 
-{{{
-public class Board {
-    Slot slots[][] = new Slot[8][8];
-}
-}}}
+The skeleton of the game is available in the Source tab now!
