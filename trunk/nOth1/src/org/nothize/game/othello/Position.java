@@ -25,6 +25,10 @@ public class Position {
 		this.y = y;
 	}
 	
+	public Position neighbor(Neighbor n) {
+		return new Position(x+n.x, y+n.y);
+	}
+	
 	@Override
 	public String toString() {
 		return x + "," + y;

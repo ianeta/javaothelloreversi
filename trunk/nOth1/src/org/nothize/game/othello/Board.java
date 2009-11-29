@@ -1,5 +1,8 @@
 package org.nothize.game.othello;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Board {
 	Piece pieces[][];
 
@@ -30,18 +33,106 @@ public class Board {
 		return pieces;
 	}
 	
-	public boolean isValidMove(Position p) {
-		int x = p.getX();
-		int y = p.getY();
+	public Piece getPiece(Position pos) {
+		if ( null == pos ) {
+			return Piece.UNDEFINED;
+		}
+		return getPiece(pos.getX(), pos.getY());
+	}
+
+	public Piece getPiece(int x, int y) {
+		if ( x >= 0 && x <= pieces[0].length && y >= 0 && y <= pieces.length ) {
+			return pieces[y][x];
+		}
+		return Piece.UNDEFINED;
+	}
+
+	public boolean isValidMove(Piece p, Position pos) {
+		Piece opp = p.getOpposite();
 		
 		// Only empty slot can be placed.
-		if ( pieces[y][x] == Piece.EMPTY ) {
+		if ( getPiece(pos) == Piece.EMPTY ) {
 			
-			// Check to see if any neighbor in the 8 directions is occupied by same player.
+			/**
+			 *  Check to see if any neighbor in the 8 directions is occupied but the opponent.
+			 *  
+			 */
 			
+			List<Neighbor> ns = getReducedNeighbors(pos);
 			
+			for ( Neighbor n : ns ) {
+				Position nPos = pos.neighbor(n);
+				if ( opp == getPiece(nPos) ) {
+					Position end = findPiece(p, nPos, n);
+					
+					// If an end is found to be same as p, a valid move is found.
+					if ( p == getPiece(end) ) {
+						return true;
+					}
+				}
+			}
 		}
 		
 		return false;
+	}
+
+	/**
+	 * A reduced neighbor list will be returned. This is done by the fact that
+	 * any candidate position that is close to the border is impossible to
+	 * occupy the border.
+	 * 
+	 * Thus we can safely exclude certain column or row when certain
+	 * conditions are met.
+	 *  
+	 * When			Exclude
+	 *  x <= 1		c1
+	 *  x >= w-1	c3
+	 *  
+	 *  y <= 1		r1
+	 *  y >= h-1	r3
+	 * 
+	 * @param pos
+	 * @return
+	 */
+	private List<Neighbor> getReducedNeighbors(Position pos) {
+		List<Neighbor> ns = Arrays.asList(Neighbor.values());
+		int w = pieces[0].length;
+		int h = pieces.length;
+		int x = pos.getX();
+		int y = pos.getY();
+		
+		if ( x <= 1 ) {
+			ns.removeAll(Neighbor.c1);
+		} else if ( x >= w-1 ) {
+			ns.removeAll(Neighbor.c3);
+		}
+		if ( y <= 1 ) {
+			ns.removeAll(Neighbor.r1);
+		} else if ( y >= h-1 ) {
+			ns.removeAll(Neighbor.r3);
+		}
+		return ns;
+	}
+
+	/**
+	 * Find the target piece in the direction of neighbor n. An empty would
+	 * terminate the search.
+	 *
+	 *
+	 * @param p The target piece.
+	 * @param pos The position to begin search. This should be a piece equals
+	 * to the opposite of p.
+	 * @param n The direction to search.
+	 * @return null if the target piece is not found.
+	 */
+	private Position findPiece(Piece p, Position pos, Neighbor n) {
+		Piece end;
+		do {
+			pos = pos.neighbor(n);
+		} while ( p.getOpposite() == (end = getPiece(pos)) );
+		if ( p == end ) {
+			return pos;
+		}
+		return null;
 	}
 }
