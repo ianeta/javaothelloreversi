@@ -1,0 +1,25 @@
+#summary Implementation
+
+= Introduction =
+
+The implementation is done in the Java language. This project may host more than one implementation of the game.
+
+= Details =
+
+A sub-folder nOth1(nothize's Othello 1) is made under the trunk to have a separate namespace so that it will be easier to add another version in another sub-folder easier in the future.
+
+== Sample screen ==
+
+Below is the first draft of the Othello board output in console mode. The ideas of using '.', 'X', 'O' as empty, black, white is brought from the Othello game I wrote a decade ago using Pascal. That idea is borrowed from the tic-tac-toe of the use of cross and circle while dot was designed to visualize the empty slots.
+
+  1 2 3 4 5 6 7 8
+1 . . . . . . . .
+2 . . . . . . . .
+3 . . . . . . . .
+4 . . . X O . . .
+5 . . . O X . . .
+6 . . . . . . . .
+7 . . . . . . . .
+8 . . . . . . . .
+
+Current player: BLACK
