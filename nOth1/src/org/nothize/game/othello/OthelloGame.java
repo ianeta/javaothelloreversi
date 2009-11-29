@@ -1,14 +1,17 @@
 package org.nothize.game.othello;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class OthelloGame {
 	OthelloState state = new OthelloState();
-	OthelloView view;
 	OthelloAdapter adapter;
 	private boolean terminate = false;
 	
-	public OthelloGame(OthelloView view, OthelloAdapter adapter) {
-		this.view = view;
+	public OthelloGame(OthelloAdapter adapter) {
 		this.adapter = adapter;
+		adapter.setState(state);
 	}
 	
 	/**
@@ -23,10 +26,18 @@ public class OthelloGame {
 		updateUI();
 		
 		Position p = adapter.getCurrentMove();
+		
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		try {
+			br.readLine();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void updateUI() {
-		view.render(state.getBoard());
+		adapter.render();
 	}
 
 	/**

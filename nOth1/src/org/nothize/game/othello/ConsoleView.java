@@ -1,15 +1,33 @@
 package org.nothize.game.othello;
 
 public class ConsoleView implements OthelloView {
-	/* (non-Javadoc)
-	 * @see org.nothize.game.othello.OthelloView#render(org.nothize.game.othello.Board)
-	 */
-	public void render(Board board) {
-		Piece[][] p = board.getPieces();
+	Player player;
+	
+	public void render(Board b) {
+		Piece[][] p = b.getPieces();
+		
+		System.out.print(" ");
 		for (int i = 0; i < p.length; i++) {
-			for (int j = 0; j < p[i].length; j++) {
-				System.out.printf("%c", p[i][j].getFace());
-			}
+			System.out.print(" " + (i+1));
 		}
+		System.out.println();
+		for (int i = 0; i < p.length; i++) {
+			System.out.print((i+1));
+			for (int j = 0; j < p[i].length; j++) {
+				System.out.printf("%2c", p[i][j].getFace());
+			}
+			System.out.println();
+		}
+		System.out.println();
+		
+		System.out.println("Current player: " + player);
+	}
+
+	public Player getPlayer() {
+		return player;
+	}
+
+	public void setPlayer(Player player) {
+		this.player = player;
 	}
 }
