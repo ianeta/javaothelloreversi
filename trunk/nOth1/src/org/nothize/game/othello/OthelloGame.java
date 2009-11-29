@@ -2,9 +2,13 @@ package org.nothize.game.othello;
 
 public class OthelloGame {
 	OthelloState state = new OthelloState();
+	OthelloView view;
+	OthelloAdapter adapter;
 	private boolean terminate = false;
 	
-	public OthelloGame() {
+	public OthelloGame(OthelloView view, OthelloAdapter adapter) {
+		this.view = view;
+		this.adapter = adapter;
 	}
 	
 	/**
@@ -16,9 +20,15 @@ public class OthelloGame {
 	 * @throws InterruptedException
 	 */
 	public void tick() throws InterruptedException {
+		updateUI();
 		
+		Position p = adapter.getCurrentMove();
 	}
 	
+	public void updateUI() {
+		view.render(state.getBoard());
+	}
+
 	/**
 	 * If the player chose to quit or when the end game condition
 	 * is met, it will be called to signal a termination request.
