@@ -25,6 +25,8 @@ public class OthelloGame {
 	public void tick() throws InterruptedException {
 		updateUI();
 		
+		updateInput();
+		
 		Position p = adapter.getCurrentMove();
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -36,6 +38,16 @@ public class OthelloGame {
 		}
 	}
 	
+	private void updateInput() {
+		Position p = adapter.getMove();
+		
+		validateMove(p);
+	}
+
+	private void validateMove(Position p) {
+		
+	}
+
 	public void updateUI() {
 		adapter.render();
 	}

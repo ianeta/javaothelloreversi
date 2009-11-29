@@ -1,4 +1,9 @@
-package org.nothize.game.othello;
+package org.nothize.game.othello.console;
+
+import org.nothize.game.othello.Board;
+import org.nothize.game.othello.OthelloView;
+import org.nothize.game.othello.Piece;
+import org.nothize.game.othello.Player;
 
 public class ConsoleView implements OthelloView {
 	Player player;
