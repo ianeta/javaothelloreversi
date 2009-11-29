@@ -1,5 +1,8 @@
 package org.nothize.game.othello;
 
+import java.util.Arrays;
+import java.util.List;
+
 public enum Neighbor {
 	UL(-1,-1),
 	U(0,-1),
@@ -19,5 +22,10 @@ public enum Neighbor {
 		this.x = x;
 		this.y = y;
 	}
+	
+	public static List<Neighbor> r1 = Arrays.asList(new Neighbor[] { UL, U, UR });
+	public static List<Neighbor> r3 = Arrays.asList(new Neighbor[] { BL, B, BR });
+	public static List<Neighbor> c1 = Arrays.asList(new Neighbor[] { UL, L, BL });
+	public static List<Neighbor> c3 = Arrays.asList(new Neighbor[] { UR, R, BR });
 }
 	
