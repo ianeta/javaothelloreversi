@@ -9,7 +9,7 @@ package org.nothize.game.othello;
  */
 public class Othello {
 	public static void main(String[] args) {
-		OthelloGame og = new OthelloGame();
+		OthelloGame og = new OthelloGame(new ConsoleView(), new ConsoleAdapter());
 		
 		while ( !og.isTerminate() ) {
 			
