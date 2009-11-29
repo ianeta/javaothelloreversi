@@ -16,8 +16,8 @@ public class OthelloState {
 	
 	public void init() {
 		board = new Board();
-		players[0] = currentPlayer = new Player(PIECE.BLACK);
-		players[1] = new Player(PIECE.WHITE);
+		players[0] = currentPlayer = new Player(Piece.BLACK);
+		players[1] = new Player(Piece.WHITE);
 		turnBegin = 0;
 	}
 	

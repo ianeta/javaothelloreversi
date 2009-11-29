@@ -1,9 +1,9 @@
 package org.nothize.game.othello;
 
 public class Board {
-	PIECE pieces[][] = new PIECE[8][8];
+	Piece pieces[][] = new Piece[8][8];
 
-	public PIECE[][] getPieces() {
+	public Piece[][] getPieces() {
 		return pieces;
 	}
 }
