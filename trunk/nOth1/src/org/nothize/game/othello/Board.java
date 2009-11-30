@@ -5,12 +5,16 @@ import java.util.List;
 
 public class Board {
 	Piece pieces[][];
+	private int width;
+	private int height;
 
    	public Board() {
 		this(8, 8);
 	}
 
 	public Board(int w, int h) {
+		this.height = h;
+		this.width = w;
 		pieces = new Piece[h][w];
 		for (int i = 0; i < pieces.length; i++) {
 			for (int j = 0; j < pieces[i].length; j++) {
@@ -34,14 +38,11 @@ public class Board {
 	}
 	
 	public Piece getPiece(Position pos) {
-		if ( null == pos ) {
-			return Piece.UNDEFINED;
-		}
 		return getPiece(pos.getX(), pos.getY());
 	}
 
 	public Piece getPiece(int x, int y) {
-		if ( x >= 0 && x <= pieces[0].length && y >= 0 && y <= pieces.length ) {
+		if ( x >= 0 && x < width && y >= 0 && y < height ) {
 			return pieces[y][x];
 		}
 		return Piece.UNDEFINED;
@@ -58,9 +59,7 @@ public class Board {
 			 *  
 			 */
 			
-			List<Neighbor> ns = getReducedNeighbors(pos);
-			
-			for ( Neighbor n : ns ) {
+			for ( Neighbor n : Neighbor.values() ) {
 				Position nPos = pos.neighbor(n);
 				if ( opp == getPiece(nPos) ) {
 					Position end = findPiece(p, nPos, n);
@@ -93,6 +92,7 @@ public class Board {
 	 * 
 	 * @param pos
 	 * @return
+	 * @deprecated The cost of running this method may outweigh the benefit.
 	 */
 	private List<Neighbor> getReducedNeighbors(Position pos) {
 		List<Neighbor> ns = Arrays.asList(Neighbor.values());
@@ -133,6 +133,14 @@ public class Board {
 		if ( p == end ) {
 			return pos;
 		}
-		return null;
+		return Position.UNDEFINED;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
 	}
 }

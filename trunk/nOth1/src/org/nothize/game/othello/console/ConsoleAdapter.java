@@ -15,11 +15,6 @@ public class ConsoleAdapter implements OthelloAdapter {
 		this.view = new ConsoleView();
 	}
 	
-	public Position getCurrentMove() {
-		Position p = new Position(4, 3);
-		return p;
-	}
-
 	public void render() {
 		view.setPlayer(state.getCurrentPlayer());
 		view.render(state.getBoard());
