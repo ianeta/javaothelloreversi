@@ -25,3 +25,10 @@ Below is the first draft of the Othello board output in console mode. The idea o
 
 Current player: BLACK
 }}}
+
+
+== TDD(Test-Driven Development) ==
+
+Ricky Liu has proposed a development method - Test-Driven Development. This has long been a dream to me whilst lacking of practical experience. So it's worth to try it here.
+
+But, where to start? [http://www.agiledata.org/essays/tdd.html Here] reveals some information.
