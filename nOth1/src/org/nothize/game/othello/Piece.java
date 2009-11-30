@@ -1,22 +1,22 @@
 package org.nothize.game.othello;
 
 public enum Piece {
-	EMPTY(Piece.EMPTY) {
+	EMPTY {
 		@Override
 		public char getFace() {
 			return '.';
 		}
-	}, BLACK(Piece.WHITE) {
+	}, BLACK {
 		@Override
 		public char getFace() {
 			return 'X';
 		}
-	}, WHITE(Piece.BLACK) {
+	}, WHITE {
 		@Override
 		public char getFace() {
 			return 'O';
 		}
-	}, UNDEFINED(Piece.UNDEFINED) {
+	}, UNDEFINED {
 		@Override
 		public char getFace() {
 			return 'U';
@@ -26,12 +26,15 @@ public enum Piece {
 	public abstract char getFace();
 	private Piece opp;
 	
-	Piece(Piece p) {
-		this.opp = p;
-	}
-
 	public Piece getOpposite() {
-		return opp;
+		switch ( this ) {
+			case BLACK:
+				return WHITE;
+			case WHITE:
+				return BLACK;
+			default:
+				return UNDEFINED;
+		}
 	}
 };
 

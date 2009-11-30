@@ -24,28 +24,18 @@ public class OthelloGame {
 	 */
 	public void tick() throws InterruptedException {
 		updateUI();
-		
 		updateInput();
-		
-		Position p = adapter.getCurrentMove();
-		
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		try {
-			br.readLine();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 	
 	private void updateInput() {
-		Position p = adapter.getMove();
-		
-		validateMove(p);
+		Position p;
+		do {
+			p = adapter.getMove();
+		} while ( !isValidMove(p) );
 	}
 
-	private void validateMove(Position p) {
-		
+	private boolean isValidMove(Position p) {
+		 return state.getBoard().isValidMove(state.getCurrentPlayer().getPiece(), p);
 	}
 
 	public void updateUI() {

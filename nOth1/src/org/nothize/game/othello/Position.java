@@ -1,6 +1,8 @@
 package org.nothize.game.othello;
 
 public class Position {
+	public final static Position UNDEFINED = new Position(-1, -1);
+	
 	private int x;
 	private int y;
 
@@ -32,5 +34,14 @@ public class Position {
 	@Override
 	public String toString() {
 		return x + "," + y;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if ( !(obj instanceof Position) ) {
+			return false;
+		}
+		Position p = (Position)obj;
+		return p.getX() == getX() && p.getY() == getY();
 	}
 }
