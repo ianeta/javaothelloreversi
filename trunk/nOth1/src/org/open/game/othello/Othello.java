@@ -1,6 +1,6 @@
-package org.nothize.game.othello;
+package org.open.game.othello;
 
-import org.nothize.game.othello.console.ConsoleAdapter;
+import org.open.game.othello.console.ConsoleAdapter;
 
 /**
  * This is the main class of the game. A game loop will continue

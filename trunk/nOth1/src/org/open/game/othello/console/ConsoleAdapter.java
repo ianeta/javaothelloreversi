@@ -1,10 +1,10 @@
-package org.nothize.game.othello.console;
+package org.open.game.othello.console;
 
 import java.util.Scanner;
 
-import org.nothize.game.othello.OthelloAdapter;
-import org.nothize.game.othello.OthelloState;
-import org.nothize.game.othello.Position;
+import org.open.game.othello.OthelloAdapter;
+import org.open.game.othello.OthelloState;
+import org.open.game.othello.Position;
 
 public class ConsoleAdapter implements OthelloAdapter {
 	private ConsoleView view;

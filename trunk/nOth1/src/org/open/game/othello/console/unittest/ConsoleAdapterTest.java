@@ -1,8 +1,8 @@
-package org.nothize.game.othello.console.unittest;
+package org.open.game.othello.console.unittest;
 
 import org.junit.Test;
-import org.nothize.game.othello.Position;
-import org.nothize.game.othello.console.ConsoleAdapter;
+import org.open.game.othello.Position;
+import org.open.game.othello.console.ConsoleAdapter;
 
 public class ConsoleAdapterTest {
 
