@@ -1,4 +1,4 @@
-package org.nothize.game.othello;
+package org.open.game.othello;
 
 public class Position {
 	public final static Position UNDEFINED = new Position(-1, -1);

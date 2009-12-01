@@ -1,4 +1,4 @@
-package org.nothize.game.othello.unittest;
+package org.open.game.othello.unittest;
 
 import java.util.Arrays;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.List;
 import junit.framework.Assert;
 
 import org.junit.Test;
-import org.nothize.game.othello.Board;
-import org.nothize.game.othello.Neighbor;
-import org.nothize.game.othello.Piece;
-import org.nothize.game.othello.Position;
+import org.open.game.othello.Board;
+import org.open.game.othello.Neighbor;
+import org.open.game.othello.Piece;
+import org.open.game.othello.Position;
 
 public class BoardTest {
 

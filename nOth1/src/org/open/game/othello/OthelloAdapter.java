@@ -1,4 +1,4 @@
-package org.nothize.game.othello;
+package org.open.game.othello;
 
 public interface OthelloAdapter {
 	void render();

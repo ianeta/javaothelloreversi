@@ -1,4 +1,4 @@
-package org.nothize.game.othello;
+package org.open.game.othello;
 
 import java.io.BufferedReader;
 import java.io.IOException;
