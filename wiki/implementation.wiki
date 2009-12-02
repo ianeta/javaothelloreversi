@@ -66,4 +66,6 @@ Choose the easier task first. 2.2 seems to be easy. It consists of two smaller t
 
 = About OOD =
 
-Just read through this page [http://ketan.padegaonkar.name/2009/09/04/tell-dont-ask-part-1.html Tell, don't ask]. It's a simple rule to follow for Object-Oriented Design.
+Just read through this page [http://ketan.padegaonkar.name/2009/09/04/tell-dont-ask-part-1.html Tell, don't ask].(Tell someone to do something, not ask someone for information to make decision) It's a simple rule to follow for Object-Oriented Design.
+
+And here is [http://ketan.padegaonkar.name/2009/09/04/tell-dont-ask-part-2.html part-2], "Objects expose behavior, not state".
