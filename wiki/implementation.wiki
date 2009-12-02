@@ -61,3 +61,9 @@ Just make sure the Board is being initialized to all EMPTY except the center 4x4
 Choose the easier task first. 2.2 seems to be easy. It consists of two smaller tasks: ask for move and move validation.
 
 ......is this the right way to TDD?
+
+
+
+= About OOD =
+
+Just read through this page [http://ketan.padegaonkar.name/2009/09/04/tell-dont-ask-part-1.html Tell, don't ask]. It's a simple rule to follow for Object-Oriented Design.
