@@ -32,3 +32,32 @@ Current player: BLACK
 Ricky Liu has proposed a development method - Test-Driven Development. This has long been a dream to me whilst lacking of practical experience. So it's worth to try it here.
 
 But, where to start? [http://www.agiledata.org/essays/tdd.html Here] reveals some information.
+
+== What to test? ==
+
+With TDD, creating test cases requires knowing part of the whole picture beforehand!
+
+So first determine the whole picture:
+
+  # Starting board.
+    # Initialization
+    # Show the board
+  # Player move
+    # If no move x 2, goto 3; If no move, goto 2.5.
+    # Ask for move until valid move
+    # Perform move
+    # Update the board
+    # switch player
+  # End game
+
+Break it, the big steps 1, 2 and 3 can be tested separately.
+
+=== Starting board ===
+
+Just make sure the Board is being initialized to all EMPTY except the center 4x4 slots following the starting position illustrated above.
+
+=== Player move ===
+
+Choose the easier task first. 2.2 seems to be easy. It consists of two smaller tasks: ask for move and move validation.
+
+......is this the right way to TDD?
