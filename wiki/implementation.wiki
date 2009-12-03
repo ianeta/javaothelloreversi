@@ -69,3 +69,9 @@ Choose the easier task first. 2.2 seems to be easy. It consists of two smaller t
 Just read through this page [http://ketan.padegaonkar.name/2009/09/04/tell-dont-ask-part-1.html Tell, don't ask].(Tell someone to do something, not ask someone for information to make decision) It's a simple rule to follow for Object-Oriented Design.
 
 And here is [http://ketan.padegaonkar.name/2009/09/04/tell-dont-ask-part-2.html part-2], "Objects expose behavior, not state".
+
+= When to do optimization? =
+
+Linked from the "Tell Don't ask" above, I come across many interesting discussion style article/wiki. One of it is [http://www.c2.com/cgi/wiki?OptimizeLater OptimizeLater]. It is a good discussion that have points from both side. Every suggestions/guide-line is not absolute, they're all living with certain assumptions and constraints.
+
+Perhaps if I have had read it earlier, I could save time *less* worrying about the performance issues, until it has happened or being a spot after profiling.
