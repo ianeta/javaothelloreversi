@@ -33,6 +33,8 @@ Ricky Liu has proposed a development method - Test-Driven Development. This has 
 
 But, where to start? [http://www.agiledata.org/essays/tdd.html Here] reveals some information.
 
+Get lost of how to unit testing? See the [http://geosoft.no/development/unittesting.html unit testing guidelines].
+
 == What to test? ==
 
 With TDD, creating test cases requires knowing part of the whole picture beforehand!
