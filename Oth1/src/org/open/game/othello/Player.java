@@ -1,7 +1,7 @@
 package org.open.game.othello;
 
 
-public class Player {
+public abstract class Player {
 	Piece piece;
 	int score = 0;
 
@@ -21,4 +21,6 @@ public class Player {
 	public String toString() {
 		return piece.toString();
 	}
+
+	public abstract Position getMove();
 }

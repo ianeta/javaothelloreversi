@@ -143,4 +143,12 @@ public class Board {
 	public int getHeight() {
 		return height;
 	}
+
+	public void setPiece(Position pos, Piece piece) {
+		int x = pos.getX();
+		int y = pos.getY();
+		if ( x >= 0 && x < width && y >= 0 && y < height ) {
+			pieces[pos.getY()][pos.getX()] = piece;
+		}
+	}
 }
